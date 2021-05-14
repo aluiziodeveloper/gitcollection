@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: #f0f0f5 url(${imgBackground}) no-repeat 70% top;
-    -wekit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
   }
 
   body, input, textarea, select, button {
