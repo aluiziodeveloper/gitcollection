@@ -1,5 +1,6 @@
 import React from 'react';
 import { FiChevronRight } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import { api } from '../../services/api';
 import { Title, Form, Repos, Error } from './styles';
@@ -69,8 +70,8 @@ export const Dashboard: React.FC = () => {
 
       <Repos>
         {repos.map(repository => (
-          <a
-            href={`/repositories/${repository.full_name}`}
+          <Link
+            to={`/repositories/${repository.full_name}`}
             key={repository.full_name}
           >
             <img
@@ -82,7 +83,7 @@ export const Dashboard: React.FC = () => {
               <p>{repository.description}</p>
             </div>
             <FiChevronRight size={20} />
-          </a>
+          </Link>
         ))}
       </Repos>
     </>
