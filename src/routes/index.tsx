@@ -4,10 +4,18 @@ import { Switch, Route } from 'react-router-dom';
 // import { Repo } from '../pages/Repo';
 
 const Dashboard = React.lazy(
-  () => import(/* webpackChunkName: "dashboard" */ '../pages/Dashboard'),
+  () =>
+    import(
+      /* webpackPrefetch: true */
+      /* webpackChunkName: "dashboard" */ '../pages/Dashboard'
+    ),
 );
 const Repo = React.lazy(
-  () => import(/* webpackChunkName: "repo" */ '../pages/Repo'),
+  () =>
+    import(
+      /* webpackPrefetch: true */
+      /* webpackChunkName: "repo" */ '../pages/Repo'
+    ),
 );
 
 export const Routes: React.FC = () => {
